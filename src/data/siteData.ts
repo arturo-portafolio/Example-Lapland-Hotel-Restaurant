@@ -189,7 +189,7 @@ export const activities: Activity[] = [
   {
     id: 'husky-safari',
     duration: '3h',
-    image: 'https://images.unsplash.com/photo-1551524559-8af4e6624178?w=800',
+    image: '/husky-safari.jpg',
     translations: {
       fi: {
         name: 'Husky-safari',
