@@ -392,3 +392,4 @@ export const languageNames: Record<Language, string> = {
   en: 'English',
   sv: 'Svenska',
 };
+
