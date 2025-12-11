@@ -69,6 +69,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'newsletter.emailError': 'Anna kelvollinen sähköpostiosoite',
     'newsletter.humanCheckError': 'Vahvista olevasi ihminen',
     'newsletter.maxSendsReached': 'Olet saavuttanut enimmäismäärän (3) lähetyksiä. Lataa sivu uudelleen kokeillaksesi uudelleen.',
+    'newsletter.interestError': 'Valitse kiinnostuksen kohde.',
     
     // Chat
     'chat.title': 'Lapin Assistentti',
@@ -168,6 +169,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'newsletter.emailError': 'Introduce un correo electrónico válido',
     'newsletter.humanCheckError': 'Confirma que eres humano',
     'newsletter.maxSendsReached': 'Has alcanzado el máximo de 3 envíos. Recarga la página para intentarlo de nuevo.',
+    'newsletter.interestError': 'Selecciona una opción de interés.',
     
     // Chat
     'chat.title': 'Asistente de Laponia',
@@ -267,6 +269,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'newsletter.emailError': 'Please enter a valid email address',
     'newsletter.humanCheckError': 'Please confirm you are human',
     'newsletter.maxSendsReached': 'You have reached the maximum of 3 submissions. Reload the page to try again.',
+    'newsletter.interestError': 'Please select an interest option.',
     
     // Chat
     'chat.title': 'Lapland Assistant',
@@ -366,7 +369,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'newsletter.emailError': 'Ange en giltig e-postadress',
     'newsletter.humanCheckError': 'Bekräfta att du är människa',
     'newsletter.maxSendsReached': 'Du har nått maximalt 3 inskickningar. Ladda om sidan för att försöka igen.',
-    
+    'newsletter.interestError': 'Välj ett intresse.',
+
     // Chat
     'chat.title': 'Lapplands Assistent',
     'chat.welcome': 'Välkommen till Hotel-Restaurang Laponias assistent! 🌟\n\nJag kan hjälpa dig med:\n• Information om rum och bokningar\n• Frågor om restaurangen och menyn\n• Planering av aktiviteter och upplevelser\n• Allmän information om Lappland\n\nDu har 4 frågor tillgängliga i denna session. Hur kan jag hjälpa dig?',
