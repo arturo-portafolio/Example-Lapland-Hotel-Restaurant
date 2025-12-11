@@ -135,15 +135,17 @@ export const RoomBookingDialog = ({ room }: RoomBookingDialogProps) => {
 
             <div className="space-y-2">
               <Label htmlFor="booking-date">{t('booking.dateLabel')}</Label>
-              <Input
-                id="booking-date"
-                type="date"
-                value={formData.date}
-                disabled={disabled}
-                onChange={(e) =>
-                  setFormData({ ...formData, date: e.target.value })
-                }
-              />
+<Input
+  id="booking-date"
+  type="date"
+  value={formData.date}
+  disabled={disabled}
+  min={new Date().toISOString().split('T')[0]}
+  onChange={(e) =>
+    setFormData({ ...formData, date: e.target.value })
+  }
+  className="w-full text-xs sm:text-sm md:text-base"
+/>
             </div>
           </div>
 
