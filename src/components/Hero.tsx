@@ -50,13 +50,13 @@ export const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <a 
-        href="#about"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-snow/70 hover:text-snow transition-colors animate-float"
-        aria-label="Scroll down"
-      >
-        <ChevronDown size={32} />
-      </a>
+<a 
+  href="#about"
+  className="absolute bottom-8 inset-x-0 flex justify-center text-snow/70 hover:text-snow transition-colors animate-float"
+  aria-label="Scroll down"
+>
+  <ChevronDown size={32} />
+</a>
     </section>
   );
 };
