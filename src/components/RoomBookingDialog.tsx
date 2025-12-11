@@ -38,6 +38,30 @@ export const RoomBookingDialog = ({ room }: RoomBookingDialogProps) => {
   const validateEmail = (email: string) =>
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
+    const validate = () => {
+    const newErrors: Record<string, string> = {};
+
+    if (!formData.name.trim()) {
+      newErrors.name = t('newsletter.nameError');
+    }
+
+    if (!formData.email.trim() || !validateEmail(formData.email)) {
+      newErrors.email = t('newsletter.emailError');
+    }
+
+    if (!formData.guests || Number(formData.guests) < 1) {
+      newErrors.guests = t('booking.guestsError');
+    }
+
+    if (!formData.date) {
+      newErrors.date = t('booking.dateError');
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (locked || isSending) return;
