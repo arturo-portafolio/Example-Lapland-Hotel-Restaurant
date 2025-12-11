@@ -67,7 +67,7 @@ export const Newsletter = () => {
     setSendCount(prev => prev + 1);
     setIsSending(false);
     setSuccess(true);
-    
+    setMaxReached(true); 
     // Reset form
     setFormData({
       name: '',
@@ -75,10 +75,8 @@ export const Newsletter = () => {
       interest: '',
       language: currentLang,
       humanCheck: false,
-    });
-    
-    // Hide success after 5 seconds
-    setTimeout(() => setSuccess(false), 5000);
+    });   
+   
   };
 
   return (
@@ -127,6 +125,7 @@ export const Newsletter = () => {
                   id="name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  disabled={maxReached}
                   placeholder={t('newsletter.namePlaceholder')}
                   className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50"
                 />
@@ -144,6 +143,7 @@ export const Newsletter = () => {
                   id="email"
                   type="email"
                   value={formData.email}
+                  disabled={maxReached}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   placeholder={t('newsletter.emailPlaceholder')}
                   className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50"
@@ -162,6 +162,7 @@ export const Newsletter = () => {
                 </Label>
                 <Select
                   value={formData.interest}
+                  disabled={maxReached}
                   onValueChange={(value) => setFormData({ ...formData, interest: value })}
                 >
                   <SelectTrigger className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground">
@@ -182,6 +183,7 @@ export const Newsletter = () => {
                 </Label>
                 <Select
                   value={formData.language}
+                  disabled={maxReached}
                   onValueChange={(value) => setFormData({ ...formData, language: value as Language })}
                 >
                   <SelectTrigger className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground">
@@ -202,6 +204,7 @@ export const Newsletter = () => {
                 <Checkbox
                   id="humanCheck"
                   checked={formData.humanCheck}
+                  disabled={maxReached}
                   onCheckedChange={(checked) => setFormData({ ...formData, humanCheck: !!checked })}
                   className="border-primary-foreground/30 data-[state=checked]:bg-primary-foreground data-[state=checked]:text-primary"
                 />
