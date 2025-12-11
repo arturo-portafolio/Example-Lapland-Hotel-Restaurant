@@ -2,6 +2,8 @@ import { useTranslation } from '@/i18n/LanguageContext';
 import { rooms } from '@/data/siteData';
 import { Button } from '@/components/ui/button';
 import { Users, Wifi, Coffee, Flame } from 'lucide-react';
+import { RoomBookingDialog } from '@/components/RoomBookingDialog';
+
 
 const amenityIcons: Record<string, typeof Wifi> = {
   wifi: Wifi,
