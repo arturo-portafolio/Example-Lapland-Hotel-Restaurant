@@ -128,6 +128,11 @@ const maxDate = maxDateObj.toISOString().split('T')[0];
                 setFormData({ ...formData, name: e.target.value })
               }
             />
+            {errors.name && (
+              <p className="text-primary-foreground/90 text-sm">
+                {errors.name}
+              </p>
+            )}
           </div>
 
           <div className="space-y-2">
@@ -141,6 +146,11 @@ const maxDate = maxDateObj.toISOString().split('T')[0];
                 setFormData({ ...formData, email: e.target.value })
               }
             />
+                      {errors.email && (
+              <p className="text-primary-foreground/90 text-sm">
+                {errors.email}
+              </p>
+            )}
           </div>
 
           <div className="grid grid-cols-2 gap-4">
@@ -157,6 +167,11 @@ const maxDate = maxDateObj.toISOString().split('T')[0];
                   setFormData({ ...formData, guests: e.target.value })
                 }
               />
+                          {errors.guests && (
+                <p className="text-primary-foreground/90 text-sm">
+                  {errors.guests}
+                </p>
+              )}
             </div>
 
             <div className="space-y-2">
@@ -176,8 +191,11 @@ const maxDate = maxDateObj.toISOString().split('T')[0];
   onClick={(e) => (e.currentTarget as HTMLInputElement).showPicker?.()}
   className="w-full text-center text-xs sm:text-sm md:text-base booking-date-input"
 />
-
-
+              {errors.date && (
+                <p className="text-primary-foreground/90 text-sm">
+                  {errors.date}
+                </p>
+              )}
             </div>
           </div>
 
