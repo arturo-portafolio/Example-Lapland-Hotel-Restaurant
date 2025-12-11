@@ -149,30 +149,18 @@
   .container-narrow {
     @apply max-w-6xl mx-auto;
   }
-  .booking-date-input {
+    .booking-date-input {
     position: relative;
     text-align: center;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    color: transparent;
-    caret-color: transparent;
+    padding-right: 2.75rem;
   }
 
   .booking-date-input::-webkit-calendar-picker-indicator {
     position: absolute;
-    inset: 0;
-    margin: auto;
-    opacity: 0;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
   }
-
-  .booking-date-input::-webkit-datetime-edit,
-  .booking-date-input::-webkit-datetime-edit-year-field,
-  .booking-date-input::-webkit-datetime-edit-month-field,
-  .booking-date-input::-webkit-datetime-edit-day-field {
-    text-align: center;
-  }
-
 }
 
 @layer utilities {
