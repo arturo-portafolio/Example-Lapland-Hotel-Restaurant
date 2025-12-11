@@ -15,6 +15,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'hero.cta': 'Varaa nyt',
     'hero.explore': 'Tutustu lisää',
     
+    
     // About
     'about.title': 'Tervetuloa Laponiaan',
     'about.description': 'Hotel-Ravintola Lappi sijaitsee keskellä lumoavaa Lapin maisemaa Rovaniemellä. Tarjoamme ainutlaatuisen yhdistelmän skandinaavista luksusta, perinteistä suomalaista vieraanvaraisuutta ja unohtumattomia arktisia elämyksiä. Olipa kyseessä revontulten ihailu, husky-safari tai rentouttava hetki aidossa suomalaisessa saunassa, meillä on kaikki mitä tarvitset täydelliseen Lapin lomaan.',
@@ -25,6 +26,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'rooms.perNight': '/ yö',
     'rooms.guests': 'vierasta',
     'rooms.book': 'Varaa',
+    'booking.dateLabel': 'Päivämäärä',
+    'booking.close': 'Sulje',
     
     // Restaurant
     'restaurant.title': 'Ravintola',
@@ -121,6 +124,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'rooms.perNight': '/ noche',
     'rooms.guests': 'huéspedes',
     'rooms.book': 'Reservar',
+    'booking.dateLabel': 'Fecha',
+    'booking.close': 'Cerrar',
     
     // Restaurant
     'restaurant.title': 'Restaurante',
@@ -217,6 +222,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'rooms.perNight': '/ night',
     'rooms.guests': 'guests',
     'rooms.book': 'Book',
+    'booking.dateLabel': 'Date',
+    'booking.close': 'Close',
     
     // Restaurant
     'restaurant.title': 'Restaurant',
@@ -313,6 +320,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'rooms.perNight': '/ natt',
     'rooms.guests': 'gäster',
     'rooms.book': 'Boka',
+    'booking.dateLabel': 'Datum',
+    'booking.close': 'Stäng',
     
     // Restaurant
     'restaurant.title': 'Restaurang',
