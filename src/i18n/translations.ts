@@ -90,7 +90,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // Footer
     'footer.hotelName': 'Hotelli-Ravintola Laponia',
     'footer.tagline': 'Koe arktinen taika Suomen Lapissa',
-    'footer.copyright': 'Hotel-Ravintola Laponia. Kaikki oikeudet pidätetään.',
+    'footer.copyright': 'Hotel-Ravintola Lappi. Kaikki oikeudet pidätetään.',
     'footer.social.facebook': 'Facebook-linkki',
     'footer.social.instagram': 'Instagram-linkki',
     'footer.social.tiktok': 'TikTok-linkki',
@@ -282,7 +282,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // Footer
     'footer.hotelName': 'Lapland Hotel-Restaurant',
     'footer.tagline': 'Experience Arctic Magic in Finnish Lapland',
-    'footer.copyright': 'Hotel-Restaurant Laponia. All rights reserved.',
+    'footer.copyright': 'Lapland Hotel-Restaurant. All rights reserved.',
     'footer.social.facebook': 'Facebook link',
     'footer.social.instagram': 'Instagram link',
     'footer.social.tiktok': 'TikTok link',
@@ -378,7 +378,7 @@ export const translations: Record<Language, Record<string, string>> = {
     // Footer
     'footer.hotelName': 'Hotell-Restaurang Lappland',
     'footer.tagline': 'Upplev arktisk magi i finska Lappland',
-    'footer.copyright': 'Hotel-Restaurang Laponia. Alla rättigheter förbehållna.',
+    'footer.copyright': 'Hotell-Restaurang Lappland. Alla rättigheter förbehållna.',
     'footer.social.facebook': 'Facebook-länk',
     'footer.social.instagram': 'Instagram-länk',
     'footer.social.tiktok': 'TikTok-länk',
