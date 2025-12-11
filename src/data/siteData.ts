@@ -25,7 +25,7 @@ export const rooms: Room[] = [
     pricePerNight: 180,
     capacity: 2,
     amenities: ['wifi', 'breakfast', 'sauna', 'minibar'],
-    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800',
+    image: '/arctic-double.jpg',
     translations: {
       fi: {
         name: 'Arktinen kahden hengen huone',
