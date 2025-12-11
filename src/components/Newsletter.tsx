@@ -172,6 +172,12 @@ export const Newsletter = () => {
                     <SelectItem value="all">{t('newsletter.interestAll')}</SelectItem>
                   </SelectContent>
                 </Select>
+                {/* 👇 AÑADIR ESTO */}
+                {errors.interest && (
+                  <p className="text-primary-foreground/90 text-sm">
+                    {errors.interest}
+                  </p>
+                )}
               </div>
 
               {/* Language */}
