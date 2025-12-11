@@ -10,7 +10,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'nav.contact': 'Yhteystiedot',
     
     // Hero
-    'hero.title': 'Hotel-Ravintola Laponia',
+    'hero.title': 'Hotel-Ravintola Lappi',
     'hero.subtitle': 'Koe arktinen taika Suomen Lapissa',
     'hero.cta': 'Varaa nyt',
     'hero.explore': 'Tutustu lisää',
@@ -202,7 +202,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'nav.contact': 'Contact',
     
     // Hero
-    'hero.title': 'Hotel-Restaurant Laponia',
+    'hero.title': 'Lapland Hotel-Restaurant',
     'hero.subtitle': 'Experience Arctic Magic in Finnish Lapland',
     'hero.cta': 'Book Now',
     'hero.explore': 'Explore More',
@@ -298,7 +298,7 @@ export const translations: Record<Language, Record<string, string>> = {
     'nav.contact': 'Kontakt',
     
     // Hero
-    'hero.title': 'Hotel-Restaurang Laponia',
+    'hero.title': 'Hotell-Restaurang Lappland',
     'hero.subtitle': 'Upplev arktisk magi i finska Lappland',
     'hero.cta': 'Boka nu',
     'hero.explore': 'Utforska mer',
