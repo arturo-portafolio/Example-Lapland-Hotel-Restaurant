@@ -65,6 +65,13 @@ export const RoomBookingDialog = ({ room }: RoomBookingDialogProps) => {
 
   const disabled = locked || isSending;
 
+  const today = new Date();
+const minDate = today.toISOString().split('T')[0];
+
+const maxDateObj = new Date(today);
+maxDateObj.setFullYear(maxDateObj.getFullYear() + 5);
+const maxDate = maxDateObj.toISOString().split('T')[0];
+
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       {/* Botón "Reservar" de la tarjeta */}
@@ -140,12 +147,14 @@ export const RoomBookingDialog = ({ room }: RoomBookingDialogProps) => {
   type="date"
   value={formData.date}
   disabled={disabled}
-  min={new Date().toISOString().split('T')[0]}
+  min={minDate}
+  max={maxDate}
   onChange={(e) =>
     setFormData({ ...formData, date: e.target.value })
   }
   className="w-full text-xs sm:text-sm md:text-base"
 />
+
             </div>
           </div>
 
