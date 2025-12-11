@@ -22,7 +22,7 @@ export const rooms: Room[] = [
   {
     id: 'arctic-double',
     slug: 'arctic-double',
-    pricePerNight: 180,
+    pricePerNight: 80,
     capacity: 2,
     amenities: ['wifi', 'breakfast', 'sauna', 'minibar'],
     image: '/arctic-double.jpg',
@@ -48,7 +48,7 @@ export const rooms: Room[] = [
   {
     id: 'aurora-suite',
     slug: 'aurora-suite',
-    pricePerNight: 350,
+    pricePerNight: 90,
     capacity: 2,
     amenities: ['wifi', 'breakfast', 'sauna', 'minibar', 'glass-ceiling', 'fireplace'],
     image: '/aurora-suite.jpg',
@@ -74,7 +74,7 @@ export const rooms: Room[] = [
   {
     id: 'snow-cabin',
     slug: 'snow-cabin',
-    pricePerNight: 420,
+    pricePerNight: 120,
     capacity: 4,
     amenities: ['wifi', 'breakfast', 'sauna', 'kitchen', 'fireplace', 'terrace'],
     image: 'https://images.unsplash.com/photo-1542718610-a1d656d1884c?w=800',
