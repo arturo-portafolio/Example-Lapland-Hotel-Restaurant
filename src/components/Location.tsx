@@ -22,19 +22,20 @@ export const Location = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Map */}
-          <div className="aspect-video lg:aspect-auto lg:h-full min-h-[300px] rounded-2xl overflow-hidden shadow-frost">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1478.8701894755692!2d25.847167!3d66.5436542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x442b4b5a0a5d6b1d%3A0x9b4c6e5e5e5e5e5e!2sRovaniemi%2C%20Finland!5e0!3m2!1sen!2s!4v1234567890"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Hotel Laponia Location"
-            />
-          </div>
+{/* Map */}
+<div className="w-full max-w-full aspect-video lg:aspect-auto lg:h-full min-h-[300px] rounded-2xl overflow-hidden shadow-frost">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1478.8701894755692!2d25.847167!3d66.5436542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x442b4b5a0a5d6b1d%3A0x9b4c6e5e5e5e5e5e!2sRovaniemi%2C%20Finland!5e0!3m2!1sen!2s!4v1234567890"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+    title="Hotel Laponia Location"
+  />
+</div>
+
 
           {/* Contact Info */}
           <div className="space-y-8">
