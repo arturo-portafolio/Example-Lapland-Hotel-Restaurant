@@ -5,6 +5,7 @@ import type { Room } from '@/data/siteData';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { CheckCircle } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
@@ -164,6 +165,7 @@ const maxDate = maxDateObj.toISOString().split('T')[0];
 
           {success && (
             <div className="mt-2 rounded-xl bg-aurora-green/20 px-3 py-2 text-sm text-foreground">
+                  <CheckCircle className="inline mr-2" size={16} />
               {t('booking.success')}
             </div>
           )}
