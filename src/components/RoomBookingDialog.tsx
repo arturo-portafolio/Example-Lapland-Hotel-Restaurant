@@ -134,7 +134,7 @@ export const RoomBookingDialog = ({ room }: RoomBookingDialogProps) => {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="booking-date">Fecha</Label>
+              <Label htmlFor="booking-date">{t('booking.dateLabel')}</Label>
               <Input
                 id="booking-date"
                 type="date"
@@ -155,13 +155,9 @@ export const RoomBookingDialog = ({ room }: RoomBookingDialogProps) => {
 
           {/* Botones inferiores */}
           <div className="flex justify-end gap-3 pt-3 border-t border-border">
-            <Button
-              type="button"
-              variant="outline"
-              onClick={() => setOpen(false)}
-            >
-              Cerrar
-            </Button>
+<Button type="button" variant="outline" onClick={() => setOpen(false)}>
+  {t('booking.close')}
+</Button>
             <Button
               type="submit"
               disabled={disabled}
