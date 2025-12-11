@@ -212,7 +212,7 @@ export const Chatbot = () => {
         <div
           role="dialog"
           aria-labelledby="chat-title"
-          className="fixed bottom-6 right-6 z-50 w-[360px] max-w-[calc(100vw-3rem)] h-[500px] max-h-[calc(100vh-6rem)] bg-card rounded-2xl shadow-frost flex flex-col overflow-hidden animate-slide-in-right"
+          className="fixed bottom-0 left-0 right-0 z-50 w-full max-w-full sm:bottom-6 sm:right-6 sm:left-auto sm:w-[360px] sm:max-w-[calc(100vw-3rem)] h-[500px] max-h-[calc(100vh-6rem)] bg-card rounded-2xl shadow-frost flex flex-col overflow-hidden animate-slide-in-right"
         >
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-border bg-primary text-primary-foreground">
