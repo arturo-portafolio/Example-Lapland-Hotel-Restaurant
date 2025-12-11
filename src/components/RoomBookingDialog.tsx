@@ -152,8 +152,9 @@ const maxDate = maxDateObj.toISOString().split('T')[0];
   onChange={(e) =>
     setFormData({ ...formData, date: e.target.value })
   }
-  className="w-full text-xs sm:text-sm md:text-base pr-10"
+  className="w-full text-xs sm:text-sm md:text-base pr-10 text-center"
 />
+
 
             </div>
           </div>
