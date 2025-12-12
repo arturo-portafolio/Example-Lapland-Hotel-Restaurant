@@ -257,16 +257,20 @@ const maxDate = maxDateObj.toISOString().split('T')[0];
             </Button>
           </div>
         </form>
-                <style>{`
-          input.booking-guests-input::-webkit-outer-spin-button,
-          input.booking-guests-input::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-            margin: 0;
-          }
-          input.booking-guests-input {
-            -moz-appearance: textfield;
-          }
-        `}</style>
+<style>{`
+  input.booking-guests-input::-webkit-outer-spin-button,
+  input.booking-guests-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input.booking-guests-input {
+    -moz-appearance: textfield;
+  }
+  input.booking-date-input::-webkit-calendar-picker-indicator {
+    position: relative;
+    right: 4px; /* mueve la flechita un poco hacia la izquierda */
+  }
+`}</style>
       </DialogContent>
     </Dialog>
   );
