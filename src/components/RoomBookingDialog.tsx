@@ -40,6 +40,8 @@ const [formData, setFormData] = useState({
 
   const validateEmail = (email: string) =>
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    const validatePhone = (phone: string) =>
+    /^[0-9+\s-]{6,20}$/.test(phone);
 
     const validate = () => {
     const newErrors: Record<string, string> = {};
@@ -51,6 +53,10 @@ if (!formData.name.trim()) {
 if (!formData.email.trim() || !validateEmail(formData.email)) {
   newErrors.email = 'newsletter.emailError';
 }
+
+if (!formData.phone.trim() || !validatePhone(formData.phone)) {
+    newErrors.phone = 'booking.phoneError';
+  }
 
 if (!formData.guests || Number(formData.guests) < 1) {
   newErrors.guests = 'booking.guestsError';
@@ -191,7 +197,11 @@ const maxDate = maxDateObj.toISOString().split('T')[0];
         setFormData({ ...formData, phone: e.target.value })
       }
     />
-    {/* (opcional) aquí podrías poner errors.phone si luego quieres validar */}
+        {errors.phone && (
+      <p className="text-red-600 text-sm">
+        {t(errors.phone)}
+      </p>
+    )}
   </div>
 
   {/* Huéspedes */}
