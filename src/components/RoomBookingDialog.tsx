@@ -56,10 +56,16 @@ const [formData, setFormData] = useState({
       newErrors.guests = t('booking.guestsError');
     }
 
-if (!formData.checkIn || !formData.checkOut) {
-  newErrors.date = t('booking.dateError');
-} else if (formData.checkOut <= formData.checkIn) {
-  newErrors.date = t('booking.dateError');
+// Fecha de entrada
+if (!formData.checkIn) {
+  newErrors.checkIn = t('booking.checkInError');
+}
+
+// Fecha de salida
+if (!formData.checkOut) {
+  newErrors.checkOut = t('booking.checkOutError');
+} else if (formData.checkIn && formData.checkOut <= formData.checkIn) {
+  newErrors.checkOut = t('booking.checkOutError');
 }
 
     setErrors(newErrors);
@@ -258,11 +264,11 @@ const maxDate = maxDateObj.toISOString().split('T')[0];
       onClick={(e) => (e.currentTarget as HTMLInputElement).showPicker?.()}
       className="w-full pr-10 text-xs sm:text-sm md:text-base booking-date-input"
     />
-      {errors.date && (
-    <p className="text-red-600 text-sm">
-      {errors.date}
-    </p>
-  )}
+{errors.checkIn && (
+  <p className="text-red-600 text-sm">
+    {errors.checkIn}
+  </p>
+)}
   </div>
 
 {/* Fecha de salida */}
@@ -285,11 +291,11 @@ const maxDate = maxDateObj.toISOString().split('T')[0];
     }
     className="w-full pr-10 text-xs sm:text-sm md:text-base booking-date-input"
   />
-  {errors.date && (
-    <p className="text-red-600 text-sm">
-      {errors.date}
-    </p>
-  )}
+{errors.checkOut && (
+  <p className="text-red-600 text-sm">
+    {errors.checkOut}
+  </p>
+)}
 </div>
 </div>
           {success && (
