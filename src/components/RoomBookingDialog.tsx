@@ -317,9 +317,18 @@ const maxDate = maxDateObj.toISOString().split('T')[0];
   input.booking-guests-input {
     -moz-appearance: textfield;
   }
-  input.booking-date-input::-webkit-calendar-picker-indicator {
-    position: relative;
 
+  /* AQUÍ EL ARREGLO DEL CALENDARIO */
+  input.booking-date-input {
+    position: relative;
+    padding-right: 2.5rem; /* deja hueco para el icono */
+  }
+
+  input.booking-date-input::-webkit-calendar-picker-indicator {
+    position: absolute;
+    right: 0.75rem;        /* lo pegamos al borde derecho */
+    top: 50%;
+    transform: translateY(-50%); /* centrado vertical */
   }
 `}</style>
       </DialogContent>
