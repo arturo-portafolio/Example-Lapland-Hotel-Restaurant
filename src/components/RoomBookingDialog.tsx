@@ -129,7 +129,7 @@ const maxDate = maxDateObj.toISOString().split('T')[0];
               }
             />
             {errors.name && (
-              <p className="text-primary-foreground/90 text-sm">
+              <p className="text-red-600 text-sm">
                 {errors.name}
               </p>
             )}
@@ -147,7 +147,7 @@ const maxDate = maxDateObj.toISOString().split('T')[0];
               }
             />
                       {errors.email && (
-              <p className="text-primary-foreground/90 text-sm">
+              <p className="text-red-600 text-sm">
                 {errors.email}
               </p>
             )}
@@ -168,7 +168,7 @@ const maxDate = maxDateObj.toISOString().split('T')[0];
                 }
               />
                           {errors.guests && (
-                <p className="text-primary-foreground/90 text-sm">
+                <p className="text-red-600 text-sm">
                   {errors.guests}
                 </p>
               )}
@@ -192,7 +192,7 @@ const maxDate = maxDateObj.toISOString().split('T')[0];
   className="w-full text-center text-xs sm:text-sm md:text-base booking-date-input"
 />
               {errors.date && (
-                <p className="text-primary-foreground/90 text-sm">
+                <p className="text-red-600 text-sm">
                   {errors.date}
                 </p>
               )}
