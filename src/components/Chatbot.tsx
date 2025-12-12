@@ -153,8 +153,9 @@ export const Chatbot = () => {
           
           if (!response.ok) throw new Error('API error');
           
-          const data = await response.json();
-          responseText = data.reply || getMockResponse(currentLang, trimmedInput);
+const data = await response.json();
+responseText = (data.reply ?? data.output) || getMockResponse(currentLang, trimmedInput);
+
         } catch {
           responseText = getMockResponse(currentLang, trimmedInput);
         }
