@@ -132,7 +132,7 @@ const maxDate = maxDateObj.toISOString().split('T')[0];
 
         <form
           onSubmit={handleSubmit}
-          className="px-6 pt-4 pb-5 space-y-4 max-h-[80vh] overflow-y-auto"
+          className="px-6 pt-4 pb-5 space-y-4 max-h-[85vh] overflow-y-auto"
         >
           <div className="space-y-2">
             <Label htmlFor="booking-name">{t('newsletter.nameLabel')}</Label>
