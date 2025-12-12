@@ -29,7 +29,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'booking.dateLabel': 'Päivämäärä',
     'booking.close': 'Sulje',
     'booking.success': 'Varauspyyntösi on lähetetty! Otamme sinuun pian yhteyttä vahvistaaksemme varauksesi.',
-
+    'booking.dateError': 'Valitse varauksen päivämäärä.',
+    
     // Restaurant
     'restaurant.title': 'Ravintola',
     'restaurant.subtitle': 'Maista Lapin makuja',
@@ -129,7 +130,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'booking.dateLabel': 'Fecha',
     'booking.close': 'Cerrar',
     'booking.success': 'Tu solicitud de reserva ha sido enviada. Nos pondremos en contacto contigo en breve para confirmar tu reserva.',
-
+    'booking.dateError': 'La fecha de la reserva es obligatoria.',
+    
     // Restaurant
     'restaurant.title': 'Restaurante',
     'restaurant.subtitle': 'Saborea los sabores de Laponia',
@@ -229,7 +231,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'booking.dateLabel': 'Date',
     'booking.close': 'Close',
     'booking.success': 'Your booking request has been sent! We will contact you shortly to confirm your reservation.',
-
+    'booking.dateError': 'Please select a booking date.',
+    
     // Restaurant
     'restaurant.title': 'Restaurant',
     'restaurant.subtitle': 'Taste the Flavors of Lapland',
@@ -329,7 +332,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'booking.dateLabel': 'Datum',
     'booking.close': 'Stäng',
     'booking.success': 'Din bokningsförfrågan har skickats! Vi kontaktar dig snart för att bekräfta din reservation.',
-    
+    'booking.dateError': 'Välj ett datum för bokningen.',
+
     // Restaurant
     'restaurant.title': 'Restaurang',
     'restaurant.subtitle': 'Smaka Lapplands smaker',
