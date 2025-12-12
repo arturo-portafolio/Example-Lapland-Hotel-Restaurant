@@ -319,7 +319,7 @@ const maxDate = maxDateObj.toISOString().split('T')[0];
   }
   input.booking-date-input::-webkit-calendar-picker-indicator {
     position: relative;
-    right: 4px; /* mueve la flechita un poco hacia la izquierda */
+
   }
 `}</style>
       </DialogContent>
