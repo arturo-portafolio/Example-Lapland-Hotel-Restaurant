@@ -258,6 +258,11 @@ const maxDate = maxDateObj.toISOString().split('T')[0];
       onClick={(e) => (e.currentTarget as HTMLInputElement).showPicker?.()}
       className="w-full pr-10 text-xs sm:text-sm md:text-base booking-date-input"
     />
+      {errors.date && (
+    <p className="text-red-600 text-sm">
+      {errors.date}
+    </p>
+  )}
   </div>
 
 {/* Fecha de salida */}
