@@ -32,6 +32,9 @@ export const translations: Record<Language, Record<string, string>> = {
     'booking.close': 'Sulje',
     'booking.success': 'Varauspyyntösi on lähetetty! Otamme sinuun pian yhteyttä vahvistaaksemme varauksesi.',
     'booking.dateError': 'Valitse varauksen päivämäärä.',
+    'booking.checkInError': 'Saapumispäivä on pakollinen.',
+    'booking.checkOutError': 'Lähtöpäivä on pakollinen.',
+
     
     // Restaurant
     'restaurant.title': 'Ravintola',
@@ -135,6 +138,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'booking.close': 'Cerrar',
     'booking.success': 'Tu solicitud de reserva ha sido enviada. Nos pondremos en contacto contigo en breve para confirmar tu reserva.',
     'booking.dateError': 'La fecha de la reserva es obligatoria.',
+    'booking.checkInError': 'La fecha de entrada es obligatoria.',
+    'booking.checkOutError': 'La fecha de salida es obligatoria.',
     
     // Restaurant
     'restaurant.title': 'Restaurante',
@@ -238,6 +243,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'booking.close': 'Close',
     'booking.success': 'Your booking request has been sent! We will contact you shortly to confirm your reservation.',
     'booking.dateError': 'Please select a booking date.',
+    'booking.checkInError': 'Check-in date is required.',
+    'booking.checkOutError': 'Check-out date is required.',
     
     // Restaurant
     'restaurant.title': 'Restaurant',
@@ -341,6 +348,8 @@ export const translations: Record<Language, Record<string, string>> = {
     'booking.close': 'Stäng',
     'booking.success': 'Din bokningsförfrågan har skickats! Vi kontaktar dig snart för att bekräfta din reservation.',
     'booking.dateError': 'Välj ett datum för bokningen.',
+    'booking.checkInError': 'Incheckningsdatum krävs.',
+    'booking.checkOutError': 'Utcheckningsdatum krävs.',
 
     // Restaurant
     'restaurant.title': 'Restaurang',
