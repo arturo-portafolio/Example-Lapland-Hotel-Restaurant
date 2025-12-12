@@ -27,12 +27,14 @@ export const RoomBookingDialog = ({ room }: RoomBookingDialogProps) => {
   const [success, setSuccess] = useState(false);
   const [locked, setLocked] = useState(false);
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    guests: room.capacity.toString(),
-    date: '',
-  });
+const [formData, setFormData] = useState({
+  name: '',
+  email: '',
+  guests: room.capacity.toString(),
+  checkIn: '',
+  checkOut: '',
+});
+
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const validateEmail = (email: string) =>
@@ -53,9 +55,11 @@ export const RoomBookingDialog = ({ room }: RoomBookingDialogProps) => {
       newErrors.guests = t('booking.guestsError');
     }
 
-    if (!formData.date) {
-      newErrors.date = t('booking.dateError');
-    }
+if (!formData.checkIn || !formData.checkOut) {
+  newErrors.date = t('booking.dateError');
+} else if (formData.checkOut <= formData.checkIn) {
+  newErrors.date = t('booking.dateError');
+}
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -90,6 +94,7 @@ const minDate = today.toISOString().split('T')[0];
 const maxDateObj = new Date(today);
 maxDateObj.setFullYear(maxDateObj.getFullYear() + 5);
 const maxDate = maxDateObj.toISOString().split('T')[0];
+  const minCheckOutDate = formData.checkIn || minDate;
     const changeGuests = (delta: number) => {
     setFormData((prev) => {
       const current = Number(prev.guests) || 1;
@@ -211,29 +216,57 @@ const maxDate = maxDateObj.toISOString().split('T')[0];
                 </p>
               )}
             </div>
-            <div className="space-y-2">
-              <Label htmlFor="booking-date">{t('booking.dateLabel')}</Label>
-<Input
-  id="booking-date"
-  type="date"
-  value={formData.date}
-  disabled={disabled}
-  min={minDate}
-  max={maxDate}
-  onChange={(e) =>
-    setFormData({ ...formData, date: e.target.value })
-  }
-  onKeyDown={(e) => e.preventDefault()}
-  onPaste={(e) => e.preventDefault()}
-  onClick={(e) => (e.currentTarget as HTMLInputElement).showPicker?.()}
-  className="w-full text-center text-xs sm:text-sm md:text-base booking-date-input"
-/>
-              {errors.date && (
-                <p className="text-red-600 text-sm">
-                  {errors.date}
-                </p>
-              )}
-            </div>
+{/* Fecha de entrada */}
+<div className="space-y-2">
+  <Label htmlFor="booking-checkin">{t('booking.checkInLabel')}</Label>
+  <Input
+    id="booking-checkin"
+    type="date"
+    value={formData.checkIn}
+    disabled={disabled}
+    min={minDate}
+    max={maxDate}
+    onChange={(e) => {
+      const newCheckIn = e.target.value;
+      setFormData((prev) => ({
+        ...prev,
+        checkIn: newCheckIn,
+        // si la salida quedó antes que la entrada, la vaciamos
+        checkOut:
+          prev.checkOut && prev.checkOut < newCheckIn ? '' : prev.checkOut,
+      }));
+    }}
+    onKeyDown={(e) => e.preventDefault()}
+    onPaste={(e) => e.preventDefault()}
+    onClick={(e) => (e.currentTarget as HTMLInputElement).showPicker?.()}
+    className="w-full text-center text-xs sm:text-sm md:text-base booking-date-input"
+  />
+</div>
+
+{/* Fecha de salida */}
+<div className="space-y-2">
+  <Label htmlFor="booking-checkout">{t('booking.checkOutLabel')}</Label>
+  <Input
+    id="booking-checkout"
+    type="date"
+    value={formData.checkOut}
+    disabled={disabled}
+    min={minCheckOutDate}
+    max={maxDate}
+    onChange={(e) =>
+      setFormData({ ...formData, checkOut: e.target.value })
+    }
+    onKeyDown={(e) => e.preventDefault()}
+    onPaste={(e) => e.preventDefault()}
+    onClick={(e) => (e.currentTarget as HTMLInputElement).showPicker?.()}
+    className="w-full text-center text-xs sm:text-sm md:text-base booking-date-input"
+  />
+  {errors.date && (
+    <p className="text-red-600 text-sm">
+      {errors.date}
+    </p>
+  )}
+</div>
           </div>
 
           {success && (
