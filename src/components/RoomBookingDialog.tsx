@@ -185,7 +185,7 @@ const maxDate = maxDateObj.toISOString().split('T')[0];
                 />
 
                 {/* Flechas personalizadas "dentro" del input */}
-                <div className="absolute inset-y-0 right-1 flex flex-col justify-center py-1 sm:hidden">
+ <div className="absolute inset-y-0 right-1 flex flex-col justify-center py-1">
                   <button
                     type="button"
                     onClick={() => changeGuests(1)}
