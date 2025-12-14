@@ -154,8 +154,8 @@ const getRemainingQuestionsMessage = (count: number, lang: Language): string => 
       let responseText: string;
       let effectiveLang: Language = isLanguage(currentLang) ? currentLang : 'en';
       
-      const apiUrl = 'https://n8n-yl61.onrender.com/webhook/hotel-restaurant-chatbot';
-      
+      const apiUrl = 'https://n8n-yl61.onrender.com/webhook/hotel-restaurant-chatbot-2';
+           
       if (apiUrl) {
         try {
           const response = await fetch(apiUrl, {
